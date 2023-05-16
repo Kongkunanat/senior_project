@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai+Looped&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+.container-slider {
+  max-width: 2000px;
+  height:590px;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity ease-in-out 0.4s;
+}
+.slide img {
+  width: 63%;
+  height: 70%;
+  padding-top: 15px;
+}
+.active-anim {
+  opacity: 1;
+}
+
+.btn-slide {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f1f1f1;
+  border: 1px solid rgba(34, 34, 34, 0.287);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.btn-slide img {
+  width: 25px;
+  height: 25px;
+  pointer-events: none;
+}
+.prev {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-60%);
+}
+.next {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-60%);
+}
+
+
+.title{
+  font-size: 35px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
+}
+
+.Common{
+  font-size: 20px;
+  font-family: 'Kanit', sans-serif;
+}
+
+.Sciname{
+  font-size: 20px;
+  font-style: italic;
+  font-family: 'Kanit', sans-serif;
+}
+
+
+.title_sciname{
+  font-size: 26px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
+}
+
+.title_Common{
+  font-size: 26px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
+
+}
+
+.title_desc
+{
+  font-size: 26px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
+
+}
+
+.title_benefit
+{
+  font-size: 26px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
+
+}
+
+.desc{
+  font-size: 20px;
+  font-family: 'Kanit', sans-serif;
+}
+
+
+.benefit{
+  font-size: 20px;
+  font-family: 'Kanit', sans-serif;
+}
+
+.habit{
+  font-size: 20px;
+  font-family: 'Kanit', sans-serif;
+  text-decoration: underline; 
+}

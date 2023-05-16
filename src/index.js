@@ -1,17 +1,53 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.css';
+import { Button } from 'reactstrap';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './components/App';
+import {BrowserRouter , Route, Routes  } from "react-router-dom";
+import { Modal, ModalHeader} from "reactstrap";
+import Learn from "../src/image_control_startpage/Learn.png";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const Overlay = () => {
+  const [goToContact, setGoToContact] = React.useState(false);
+  const [modal, setModal] = React.useState(false);
+  const toggle = () => setModal(!modal);
+  if (goToContact) {
+    return    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+    </Routes>
+  </BrowserRouter>;
+  }
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  return (
+    <>
+    
+        <div class="container">
+          <div class="left"></div>
+            <div class="right">
+              <h1 className="s1">Virtual Gallery</h1>
+              <p className="s2">ยินดีต้อนรับเข้าสู่ แกลเลอรี่เสมือนจริง<br/>นี้เป็นแหล่งรวบรวมความรู้ข้อมูลเห็ด พรรณไม้ และสมุนไพรท้องถิ่น<br/>
+                ที่อยู่โดยรอบเขาพลวง วิทยาลัยชัยบาดาลพิพัฒน์</p>
+              <div class="btn-container">
+              <Button color="white"
+                onClick={toggle}>การใช้งาน</Button>
+            <Modal isOpen={modal} toggle={toggle} backdrop="static">
+                <ModalHeader
+                    toggle={toggle}></ModalHeader>
+                    <img   src={Learn} />
+            </Modal> 
+              <button
+        onClick={() => {
+          setGoToContact(true);
+        }}
+      > เข้าสู่แกลเลอรี่เสมือนจริง </button>   
+   </div>
+  </div>
+ </div>
+
+      </> 
+  )
+}
+
+ReactDOM.render(<Overlay />, document.getElementById("root"))

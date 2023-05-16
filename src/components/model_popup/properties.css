@@ -1,0 +1,18 @@
+.content {
+    padding-top: 10px;
+    transform: translate3d(200%, 0, 0);
+    text-align: right;
+    font-size: 20px;
+    background: white;
+  }
+  
+  .content::after {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    width: 250px;
+    transform: translate3d(-190px, 0, 0);
+    height: 1px;
+    background: white;
+  }
