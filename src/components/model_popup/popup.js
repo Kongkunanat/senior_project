@@ -14,7 +14,7 @@ export const PopUp = forwardRef((props, ref) => {
 
 
 
-  Axios.get('http://localhost:3003/getmushroom_cat3').then((response)  => {
+  Axios.get('https://happy-deer-beret.cyclic.app/getmushroom_cat3').then((response)  => {
       setData(response.data);
   });
 
@@ -67,7 +67,7 @@ export const PopUp = forwardRef((props, ref) => {
                             className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
                         >
                        <center><p class ="title" >เห็ด</p> <img  
-                            src={`http://localhost:3003/images/${item.forest_image}`}  alt='some value'
+                            src={`https://virtualgallerymushroom.s3.amazonaws.com/${item.forest_image}`}  alt='some value'
                         />
                           <p class ="title" >{item.forest_title}</p>
                           <span class ="title_sciname">ชื่อวิทยาศาสตร์  </span>

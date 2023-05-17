@@ -11,7 +11,7 @@ export const PopUpM2 = forwardRef((props, ref) => {
 
 
 
-Axios.get('http://localhost:3003/getmushroom2').then((response)  => {
+Axios.get('https://happy-deer-beret.cyclic.app/getmushroom2').then((response)  => {
     setData(response.data);
 });
 
@@ -40,7 +40,7 @@ Axios.get('http://localhost:3003/getmushroom2').then((response)  => {
             {data.map(item => (
               <>
                         <center> <img  class="img"
-                            src={`http://localhost:3003/images/${item.forest_image}`}  alt='some value'
+                            src={`https://virtualgallerymushroom.s3.amazonaws.com/${item.forest_image}`}  alt='some value'
                         />
                           <p class ="title" >{item.forest_title}</p>
                           <span class ="title_sciname">ชื่อวิทยาศาสตร์  </span>

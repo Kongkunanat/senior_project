@@ -12,7 +12,7 @@ export const Popupalldata = forwardRef((props, ref) => {
 
 
 
-Axios.get('http://localhost:3003/getdata').then((response)  => {
+Axios.get('https://happy-deer-beret.cyclic.app/getdata').then((response)  => {
     setData(response.data);
 });
 
@@ -65,7 +65,7 @@ Axios.get('http://localhost:3003/getdata').then((response)  => {
                             className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
                         >
                         <center> <img   class="img"   
-                            src={`http://localhost:3003/images/${item.forest_image}`}  alt='some value'
+                            src={`https://virtualgallerymushroom.s3.amazonaws.com/${item.forest_image}`}  alt='some value'
                         />
                           <p class ="title" >{item.forest_title}</p>
                           <span class ="title_sciname">ชื่อวิทยาศาสตร์  </span>
